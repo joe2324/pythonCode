@@ -1,0 +1,12 @@
+import requests
+import json
+p = ['trump','biden']
+url = 'https://newsapi.org/v2/top-headlines?q=biden&apiKey=23b0b4b37219472b9ed4b9d78406151f'
+response = requests.get(url)
+r = response.json()
+
+
+for i in r['articles']:
+    print(i['title'])
+
+
